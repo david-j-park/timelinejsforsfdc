@@ -1,0 +1,58 @@
+<apex:page sidebar="false" standardStylesheets="false" showHeader="false" applyHtmlTag="false">
+    <html ng-app="Timeline">
+		<head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <apex:stylesheet value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    		<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"/>
+            <apex:includeScript value="{!$Resource.MomentJS}"/>
+        </head>        
+        <body>
+            <div class="container">
+                
+            <div ng-controller="TLCtrl">
+                <div class="jumbotron">
+                    
+                <h1>
+                    {{ timeline.title.text.headline }}
+                </h1>
+                <div ng-bind-html="timeline.title.text.text | trust">
+                </div>
+                    
+                </div>
+                <div ng-repeat="s in timeline.events">
+                    <h2>
+                        {{s.text.headline}}
+                    </h2>
+                    <p class="date">
+                        {{ s.start_date | fixdate:s.display_date }}
+                    </p>
+                    <div ng-bind-html="s.text.text | trust">
+                        
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </body>
+        <script type="text/javascript">
+        	angular.module('Timeline', []).controller('TLCtrl', ['$scope', '$http', function($scope, $http){
+            	$http.get('./TimelineJSON?id={!$CurrentPage.parameters.id}').then(
+                	function successCb(resp){
+                    	$scope.timeline = resp.data;
+                    },
+                    function errorCb(resp){}
+                );  
+            }]).filter('fixdate', function(){
+                return function(input, displayDate){
+                    if (displayDate) return displayDate;
+                    //return new Date(input.year, input.month || 1, input.day || 1).toISOString();
+                    return moment([input.year, input.month - 1 || 1, input.day || 1]).format('MMMM D, YYYY');
+                }
+            }).filter('trust', ['$sce', function($sce){
+            	return function(input){
+                    return $sce.trustAsHtml(input);  
+                };
+            }]);
+        </script>
+    </html>
+</apex:page>

@@ -1,0 +1,30 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Timeline_Slide__c",
+                "referenceId": "Timeline_Slide__cRef1"
+            },
+            "Title__c": "Slide 1",
+            "Details__c": "<p>First, something happened.</p>",
+            "Start_Year__c": "1900",
+            "Start_Month__c": 1,
+            "Start_Day__c": 1,
+            "Display_Date__c": "In the Past",
+            "Timeline__c": "@Timeline__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Timeline_Slide__c",
+                "referenceId": "Timeline_Slide__cRef2"
+            },
+            "Title__c": "Slide 2",
+            "Details__c": "<p>Later, more stuff happened.</p>",
+            "Start_Year__c": "1950",
+            "Start_Month__c": 1,
+            "Start_Day__c": 1,
+            "Display_Date__c": "More Recently",
+            "Timeline__c": "@Timeline__cRef1"
+        }
+    ]
+}

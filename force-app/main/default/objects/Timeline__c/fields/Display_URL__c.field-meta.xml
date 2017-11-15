@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(
+  IF(
+      CONTAINS($Api.Partner_Server_URL_260, 'visual'), 
+      'https://'+
+      MID($Api.Partner_Server_URL_260, FIND( 'visual', $Api.Partner_Server_URL_260)-4,4)
+      +'salesforce.com/',
+      LEFT($Api.Partner_Server_URL_260, FIND( '/services', $Api.Partner_Server_URL_260))
+  ) + "apex/TimelineDisplay?id=" +  Id, IF(
+      CONTAINS($Api.Partner_Server_URL_260, 'visual'), 
+      'https://'+
+      MID($Api.Partner_Server_URL_260, FIND( 'visual', $Api.Partner_Server_URL_260)-4,4)
+      +'salesforce.com/',
+      LEFT($Api.Partner_Server_URL_260, FIND( '/services', $Api.Partner_Server_URL_260))
+  ))</formula>
+    <label>Display URL</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,3 @@
+<apex:page controller="TimelineController" contentType="application/x-JavaScript; charset=utf-8" showHeader="false" standardStylesheets="false" sidebar="false">
+{!outjson}
+</apex:page>

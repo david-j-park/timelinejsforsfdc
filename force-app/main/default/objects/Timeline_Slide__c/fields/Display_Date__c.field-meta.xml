@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this to override the usage of the start/end dates in the slide labeling. Useful if, for example, you want to display only the year and month of an event, but need to specify a specific day for historical accuracy.</inlineHelpText>
+    <label>Display Date</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

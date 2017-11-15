@@ -1,0 +1,15 @@
+<apex:page sidebar="false" standardStylesheets="false" showHeader="false" applyHtmlTag="false">
+    <html>
+		<head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		    <apex:stylesheet value="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css"/>
+    		<apex:includeScript value="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"/>
+        </head>        
+        <body>
+            <div id="timeline-embed" style="height: 650px"></div>
+            <script type="text/javascript">
+            var t = new TL.Timeline('timeline-embed', './TimelineJSON?id={!$CurrentPage.parameters.id}');
+            </script>
+        </body>
+    </html>
+</apex:page>

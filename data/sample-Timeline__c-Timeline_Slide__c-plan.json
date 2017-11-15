@@ -1,0 +1,18 @@
+[
+    {
+        "sobject": "Timeline__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "sample-Timeline__cs.json"
+        ]
+    },
+    {
+        "sobject": "Timeline_Slide__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "sample-Timeline_Slide__cs.json"
+        ]
+    }
+]
