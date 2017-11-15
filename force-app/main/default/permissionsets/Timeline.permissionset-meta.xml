@@ -133,7 +133,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Timeline__c.List_View_URL__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
