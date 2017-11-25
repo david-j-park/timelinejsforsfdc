@@ -20,7 +20,7 @@ sfdx force:data:tree:import -p data/Timeline__c-Timeline_Slide__c-plan.json
 Then assign the *Timeline* permission set to your scratch org user:
 
 ```
-sfdx force:user:permset:assign -p Timeline
+sfdx force:user:permset:assign -n Timeline
 ```
 
 You should now be able to open your org and use the timeline objects.
