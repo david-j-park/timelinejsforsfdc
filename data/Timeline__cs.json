@@ -1,0 +1,13 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Timeline__c",
+                "referenceId": "Timeline__cRef1"
+            },
+            "Title__c": "Test Timeline for DX, dude!",
+            "Subtitle__c": "<p>This is only a test. For grins, here&#39;s a list:</p><ul><li>An item</li><li>Another</li><li>You get the idea.</li></ul>",
+            "Background_Color__c": "#336600"
+        }
+    ]
+}

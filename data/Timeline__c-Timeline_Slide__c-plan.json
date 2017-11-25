@@ -4,7 +4,7 @@
         "saveRefs": true,
         "resolveRefs": false,
         "files": [
-            "sample-Timeline__cs.json"
+            "Timeline__cs.json"
         ]
     },
     {
@@ -12,7 +12,7 @@
         "saveRefs": false,
         "resolveRefs": true,
         "files": [
-            "sample-Timeline_Slide__cs.json"
+            "Timeline_Slide__cs.json"
         ]
     }
 ]

@@ -1,0 +1,8 @@
+<aura:component controller="TimelineController" implements="force:appHostable">
+    <aura:attribute name="tldata" type="String"/>
+    <aura:attribute name="TimelineID" type="Id" />
+    <aura:handler name="render" value="{!this}" action="{!c.doInit}"/>
+    <ltng:require scripts="/resource/Timelines/knightlabs_timeline/timeline.js"
+        />
+    <div id="timeline-embed" aura:id="timeline-embed">Placeholder Text</div>
+</aura:component>	

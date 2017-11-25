@@ -1,0 +1,11 @@
+SELECT Id, Title__c, Subtitle__c, Background_Color__c, Background_URL__c, (
+        	SELECT Title__c, Details__c, Start_Year__c, Start_Month__c, Start_Day__c, 
+            	End_Year__c, End_Month__c, End_Day__c, Background_URL__c, Background_Color__c,
+            	Media_URL__c, Media_Caption__c, Media_Credit__c, Media_Thumbnail__c, Media_Alt_Tag_Text__c,
+            	Group__c, Display_Date__c
+            from Timeline_Slides__r
+        ), (
+        	SELECT Title__c, Details__c, Start_Year__c, Start_Month__c, Start_Day__c,
+            End_Year__c, End_Month__c, End_Day__c
+            from Timeline_Eras__r
+        ) FROM Timeline__c
