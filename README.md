@@ -16,3 +16,17 @@ Clone the repository, push the source to a scratch org, and import the sample da
 ```
 sfdx force:data:tree:import -p data/Timeline__c-Timeline_Slide__c-plan.json
 ```
+
+Then assign the *Timeline* permission set to your scratch org user:
+
+```
+sfdx force:user:permset:assign -p Timeline
+```
+
+You should now be able to open your org and use the timeline objects.
+
+## License
+
+MIT license (see LICENSE.md) for full details. 
+
+Additional javascript components included herein--Moment JS and Timeline JS retain their own licenses. 
